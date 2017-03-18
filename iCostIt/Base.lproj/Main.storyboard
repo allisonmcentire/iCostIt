@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="x5s-dM-ltF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="do9-FA-dRq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -31,7 +31,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="149"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QRA-cX-ZAQ" id="IeA-mX-3Q3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="148"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="148.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UKk-lf-yBB">
@@ -179,7 +179,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GgG-Cv-18i" id="9d0-rc-1jT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -318,7 +318,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="142"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EEb-f8-wpD" id="CSq-ub-Fkb">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="141"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="141.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xnP-7V-gMx">
@@ -520,6 +520,77 @@
             </objects>
             <point key="canvasLocation" x="2111.1999999999998" y="136.28185907046478"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Yq8-Rz-QaH">
+            <objects>
+                <viewController id="do9-FA-dRq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vl8-UO-UMA"/>
+                        <viewControllerLayoutGuide type="bottom" id="o2x-98-eaW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I4a-rN-gEV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EDUCATION-ICONS-5" translatesAutoresizingMaskIntoConstraints="NO" id="wGC-Xm-6oY">
+                                <rect key="frame" x="0.0" y="242" width="375" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iCostIt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFc-zg-Pc7">
+                                <rect key="frame" x="0.0" y="95" width="375" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.73333333333333328" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="42"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJx-sv-Kra">
+                                <rect key="frame" x="0.0" y="491" width="375" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.73333333333333328" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Know what the contract costs">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aU9-fm-N4m" kind="show" id="Vc1-sM-O9N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q1g-DG-BT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="584.79999999999995" y="-2704.4977511244379"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bKT-Kc-zkp">
+            <objects>
+                <viewController id="aU9-fm-N4m" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ITB-Hf-ybQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ea9-IC-gFz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9aI-ZF-aq7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0df-yY-DcG">
+                                <rect key="frame" x="148" y="280" width="30" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wQP-S5-X9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1277" y="-2701"/>
+        </scene>
         <!--Wage Classes Nav Controller-->
         <scene sceneID="550-JN-p0Y">
             <objects>
@@ -559,6 +630,9 @@
             <point key="canvasLocation" x="1156" y="-201"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="EDUCATION-ICONS-5" width="2133" height="2133"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VNj-Dg-YTC"/>
         <segue reference="usT-gd-di4"/>
