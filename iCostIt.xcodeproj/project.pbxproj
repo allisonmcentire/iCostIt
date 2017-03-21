@@ -25,6 +25,7 @@
 		CB3D1F1D1E7D8A530037A396 /* icon_15.png in Resources */ = {isa = PBXBuildFile; fileRef = CB3D1F1C1E7D8A530037A396 /* icon_15.png */; };
 		CB3D1F1F1E7D8C380037A396 /* icon_761.png in Resources */ = {isa = PBXBuildFile; fileRef = CB3D1F1E1E7D8C380037A396 /* icon_761.png */; };
 		CB3D1F241E7D8F5A0037A396 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3D1F231E7D8F5A0037A396 /* TutorialViewController.swift */; };
+		CB4027A21E80AB1300373F47 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4027A11E80AB1300373F47 /* TutorialPageViewController.swift */; };
 		CB921F431DFB198600560ED5 /* ProposalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB921F421DFB198600560ED5 /* ProposalCell.swift */; };
 		CBA262A71DF63F5600083775 /* ProposalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA262A61DF63F5600083775 /* ProposalDetailViewController.swift */; };
 		CBA262AC1DF63FA100083775 /* WageClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA262AB1DF63FA100083775 /* WageClassesTableViewController.swift */; };
@@ -78,6 +79,7 @@
 		CB3D1F1C1E7D8A530037A396 /* icon_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_15.png; sourceTree = "<group>"; };
 		CB3D1F1E1E7D8C380037A396 /* icon_761.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_761.png; sourceTree = "<group>"; };
 		CB3D1F231E7D8F5A0037A396 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		CB4027A11E80AB1300373F47 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
 		CB921F421DFB198600560ED5 /* ProposalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposalCell.swift; sourceTree = "<group>"; };
 		CBA262A61DF63F5600083775 /* ProposalDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposalDetailViewController.swift; sourceTree = "<group>"; };
 		CBA262AB1DF63FA100083775 /* WageClassesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WageClassesTableViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				CB38312A1DFB13960087BD8A /* views */,
 				CB2B84961DF6171400B1E435 /* AppDelegate.swift */,
 				CB2B849A1DF6171400B1E435 /* Main.storyboard */,
+				CB4027A11E80AB1300373F47 /* TutorialPageViewController.swift */,
 				CB3D1F231E7D8F5A0037A396 /* TutorialViewController.swift */,
 				CBA262AF1DF63FCA00083775 /* wageClasses */,
 				CBA262AA1DF63F7F00083775 /* proposals */,
@@ -384,6 +387,7 @@
 				CB02B4F91E63A2800088C31B /* WageClass+CoreDataClass.swift in Sources */,
 				CB38311B1DFA3B740087BD8A /* ProposalTableViewController.swift in Sources */,
 				CB02B4FA1E63A2800088C31B /* WageClass+CoreDataProperties.swift in Sources */,
+				CB4027A21E80AB1300373F47 /* TutorialPageViewController.swift in Sources */,
 				CBA262A71DF63F5600083775 /* ProposalDetailViewController.swift in Sources */,
 				CB3831291DFB138E0087BD8A /* MaterialView.swift in Sources */,
 				CB02B4F71E63A2800088C31B /* Proposal+CoreDataClass.swift in Sources */,

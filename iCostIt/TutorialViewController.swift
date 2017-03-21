@@ -20,7 +20,7 @@ class TutorialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        beginButton.layer.cornerRadius = 5
+        beginButton.layer.cornerRadius = 25
         
 
         // Do any additional setup after loading the view.
