@@ -125,22 +125,36 @@ class ProposalDetailViewController: UIViewController,  UITableViewDataSource, UI
         let wageClass = wageClasses[indexPath.row]
         
         
-        let wageClassStatus = wageClass.value(forKey: "checked") as? Bool ?? true
+       
         
         cell.textLabel?.text = wageClass.value(forKey: "wageClassName") as? String
         
-        var accessoryType = UITableViewCellAccessoryType.none
-        var tintColor = UIColor.clear
-        
-        if (wageClassStatus) {
-            accessoryType = UITableViewCellAccessoryType.checkmark
-            tintColor = UIColor.green
-            
-        }
-        
-        cell.accessoryType=accessoryType
-        cell.tintColor = tintColor
+//        var accessoryType = UITableViewCellAccessoryType.none
+//        var tintColor = UIColor.clear
 //        
+//        
+//           let wageClassSelected = wageClass.value(forKey: "checked") as? Bool ?? true
+//        if (wageClassSelected) {
+//            accessoryType = UITableViewCellAccessoryType.checkmark
+//            tintColor = UIColor.green
+//         
+//            
+//        }
+//        else {
+//            cell.accessoryType = .none
+//        }
+//        
+//        
+//      
+//        
+//        cell.accessoryType=accessoryType
+//        cell.tintColor = tintColor
+////
+        
+        
+        
+        
+        
         
         return cell
         
@@ -184,10 +198,30 @@ class ProposalDetailViewController: UIViewController,  UITableViewDataSource, UI
 
        
         
-        
+       
     
-       proposalToEdit?.addToWageClasses(wageClassObject)
+       
         
+        
+        if (wageClassStatus) {
+            proposalToEdit?.addToWageClasses(wageClassObject)
+            
+            
+        }
+        else {
+            proposalToEdit?.removeFromWageClasses(wageClassObject)
+            
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if let cell = tableView.cellForRow(at: indexPath) {
+            if cell.accessoryType == .checkmark {
+                cell.accessoryType = .none
+            } else {
+                cell.accessoryType = .checkmark
+            }
+        }
+    
         
        
         
@@ -207,12 +241,15 @@ class ProposalDetailViewController: UIViewController,  UITableViewDataSource, UI
         }
               })
         
-        tableView.deselectRow(at: indexPath,animated:false)
+//        tableView.deselectRow(at: indexPath,animated:false)
+//        
+//       
+//        tableView.reloadRows(at: [indexPath], with: .none)
+//        
+//        tableView.deselectRow(at: indexPath, animated: true)
         
-       
-        tableView.reloadRows(at: [indexPath], with: .none)
         
-       
+    
         
         
         
@@ -264,7 +301,7 @@ class ProposalDetailViewController: UIViewController,  UITableViewDataSource, UI
         }
         
       
-       
+       /// if let setting the checked value?
         
        
        

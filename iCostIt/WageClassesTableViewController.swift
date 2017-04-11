@@ -26,7 +26,7 @@ class WageClassesTableViewController: UIViewController, UITableViewDelegate, UIT
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
-       generateTestData()
+    //   generateTestData()
         attemptFetch()
         
     }
