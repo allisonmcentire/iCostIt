@@ -63,8 +63,9 @@ class ProposalDetailViewController: UIViewController,  UITableViewDataSource, UI
         
         
        
-        tableView.dataSource = self
-        tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.allowsMultipleSelection = true
         
         
         if let topItem = self.navigationController?.navigationBar.topItem {
@@ -101,13 +102,7 @@ class ProposalDetailViewController: UIViewController,  UITableViewDataSource, UI
         } catch {
             // handle error
         }
-        
-       
-        
-        
-        
-        
-        
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -115,6 +110,7 @@ class ProposalDetailViewController: UIViewController,  UITableViewDataSource, UI
         
         return  wageClasses.count
     }
+    
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -129,81 +125,26 @@ class ProposalDetailViewController: UIViewController,  UITableViewDataSource, UI
         
         cell.textLabel?.text = wageClass.value(forKey: "wageClassName") as? String
         
-//        var accessoryType = UITableViewCellAccessoryType.none
-//        var tintColor = UIColor.clear
-//        
-//        
-//           let wageClassSelected = wageClass.value(forKey: "checked") as? Bool ?? true
-//        if (wageClassSelected) {
-//            accessoryType = UITableViewCellAccessoryType.checkmark
-//            tintColor = UIColor.green
-//         
-//            
-//        }
-//        else {
-//            cell.accessoryType = .none
-//        }
-//        
-//        
-//      
-//        
-//        cell.accessoryType=accessoryType
-//        cell.tintColor = tintColor
-////
-        
-        
-        
-        
-        
-        
         return cell
         
     }
     
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        if indexPath.section == 0 {
-//            if let cell = tableView.cellForRow(at: indexPath as IndexPath) {
-//                cell.accessoryType = .checkmark
-//            }
-//        }
-//        else {
-//            if let cell = tableView.cellForRow(at: indexPath as IndexPath) {
-//                cell.accessoryType = .checkmark
-//            }
-//        }
-//    }
-//    
-//    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-//        if indexPath.section == 1 {
-//            if let cell = tableView.cellForRow(at: indexPath as IndexPath) {
-//                cell.accessoryType = .none
-//            }
-//        }
-//    }
+   
+  
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-       
+        
         
         let wageClassObject = self.wageClasses[indexPath.row]
        
-        let wageClassStatus = wageClassObject.value(forKey: "checked") as? Bool ?? true
+        let wageClassStatus = wageClassObject.value(forKey: "checked") as? Bool
         
-        wageClassObject.setValue(!wageClassStatus, forKey:"checked")
+        wageClassObject.setValue(!wageClassStatus!, forKey:"checked")
        
-        
-        
-        // Add WageClass to Proposal
-      //  proposalToEdit?.setValue(NSSet(object: wageClassObject), forKey: "wageClasses")
 
-       
         
-       
-    
-       
-        
-        
-        if (wageClassStatus) {
+        if (wageClassStatus)! {
             proposalToEdit?.addToWageClasses(wageClassObject)
             
             
@@ -212,49 +153,35 @@ class ProposalDetailViewController: UIViewController,  UITableViewDataSource, UI
             proposalToEdit?.removeFromWageClasses(wageClassObject)
             
         }
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        if let cell = tableView.cellForRow(at: indexPath) {
-            if cell.accessoryType == .checkmark {
-                cell.accessoryType = .none
-            } else {
-                cell.accessoryType = .checkmark
-            }
-        }
-    
-        
-       
-        
-  
-        context.performAndWait({
-            
-      
-        
-        do {
-            try
-                
-                    adD.saveContext()
-            
-           
-        } catch let error as NSError {
-            print("Cannot save object: \(error), \(error.localizedDescription)")
-        }
-              })
-        
-//        tableView.deselectRow(at: indexPath,animated:false)
+ 
+//        context.performAndWait({
+//            
+//      
 //        
-//       
-//        tableView.reloadRows(at: [indexPath], with: .none)
+//        do {
+//            try
+//                
+//                    adD.saveContext()
+//            
+//           
+//        } catch let error as NSError {
+//            print("Cannot save object: \(error), \(error.localizedDescription)")
+//        }
+//              })
 //        
-//        tableView.deselectRow(at: indexPath, animated: true)
-        
-        
-    
-        
-        
         
     }
 
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 1 {
+            if let cell = tableView.cellForRow(at: indexPath as IndexPath) {
+                cell.accessoryType = .none
+            }
+        }
+    }
+    
+   
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -300,6 +227,7 @@ class ProposalDetailViewController: UIViewController,  UITableViewDataSource, UI
             proposal.percentIncrease = (percentIncrease as NSString).doubleValue
         }
         
+     
       
        /// if let setting the checked value?
         
