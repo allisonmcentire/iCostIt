@@ -20,6 +20,25 @@ class WageClassesDetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var wagePerHourField: UITextField!
     
     
+    @IBOutlet weak var avgInsurancePremiumLabel: UITextField!
+    
+    @IBOutlet weak var costPerMonthLabel: UITextField!
+    
+    
+    @IBOutlet weak var proposedInsurancePremField: UITextField!
+    
+    @IBOutlet weak var increasedCostPerMonthField: UITextField!
+    
+    
+    @IBOutlet weak var monthlyCostMedInsurancePerMonthField: UITextField!
+    
+    @IBOutlet weak var proposedMedMonthlyPerEmployeeField: UITextField!
+   
+    
+    @IBOutlet weak var pensionMonthlyCostPerEmployeeField: UITextField!
+    
+    @IBOutlet weak var pensionProposedMonthlyCostPerEmployeeField: UITextField!
+    
     
     var wageClassToEdit: WageClass?
     
@@ -34,6 +53,15 @@ class WageClassesDetailViewController: UIViewController, UITextFieldDelegate {
         wageClassNameField.delegate = self
         numberOfWorkersField.delegate = self
         wagePerHourField.delegate = self
+        avgInsurancePremiumLabel.delegate = self
+        costPerMonthLabel.delegate = self
+        proposedInsurancePremField.delegate = self
+        increasedCostPerMonthField.delegate = self
+        monthlyCostMedInsurancePerMonthField.delegate = self
+        proposedMedMonthlyPerEmployeeField.delegate = self
+        pensionMonthlyCostPerEmployeeField.delegate = self
+        pensionProposedMonthlyCostPerEmployeeField.delegate = self
+        
         
         if let topItem = self.navigationController?.navigationBar.topItem {
             
@@ -88,6 +116,65 @@ class WageClassesDetailViewController: UIViewController, UITextFieldDelegate {
         
         wageClass.wagesPaidPerHour = totalCostNum
         
+        // life insurance
+        if let avgInsurancePremium = avgInsurancePremiumLabel.text {
+            wageClass.avgInsurancePremium = (avgInsurancePremium as NSString).doubleValue
+        }
+        
+        if let costPerMonth = costPerMonthLabel.text {
+            wageClass.costPerCoverageMonth = (costPerMonth as NSString).doubleValue
+        }
+        
+        if let proposedInsurancePrem = proposedInsurancePremField.text {
+            wageClass.proposedInsurancePremium = (proposedInsurancePrem as NSString).doubleValue
+        }
+        
+        if let increasedCostPerMonth = increasedCostPerMonthField.text {
+            wageClass.proposedCostPerCoverageMonth = (increasedCostPerMonth as NSString).doubleValue
+        }
+        
+        //medical insurance
+        
+        if let monthlyCostMedInsurancePerMonth = monthlyCostMedInsurancePerMonthField.text {
+            wageClass.monthlyCostMedInsurancePerMonth = (monthlyCostMedInsurancePerMonth as NSString).doubleValue
+        }
+      
+        
+        wageClass.montlyClassCostMedInsurance = wageClass.monthlyCostMedInsurancePerMonth * 12 * wageClass.numberOfWorkers
+        
+        
+        if let proposedMedMonthlyPerEmployee = proposedMedMonthlyPerEmployeeField.text {
+            wageClass.proposedMedMonthlyPerEmployee = (proposedMedMonthlyPerEmployee as NSString).doubleValue
+        }
+        
+        if let pensionMonthlyCostPerEmployee = pensionMonthlyCostPerEmployeeField.text {
+            wageClass.pensionMonthlyCostPerEmployee = (pensionMonthlyCostPerEmployee as NSString).doubleValue
+        }
+        
+        if let pensionProposedMonthlyCostPerEmployee = pensionProposedMonthlyCostPerEmployeeField.text {
+            wageClass.pensionProposedMonthlyCostPerEmployee = (pensionProposedMonthlyCostPerEmployee as NSString).doubleValue
+        }
+      
+        wageClass.proposedMedMonthlyClassPerEmployee = wageClass.proposedMedMonthlyPerEmployee * 12 * wageClass.numberOfWorkers
+        
+
+        //these are insurance calculations
+        let wageClassCurrLifeInsuranceTAC = wageClass.numberOfWorkers * (wageClass.avgInsurancePremium/1000) * 12 * wageClass.costPerCoverageMonth
+        
+        
+        
+        wageClass.wageClassCurrMedCost = wageClassCurrLifeInsuranceTAC
+        debugPrint("\(wageClass.wageClassCurrMedCost)")
+        
+        
+         wageClass.wageClassProMedCost = wageClass.numberOfWorkers * (wageClass.proposedInsurancePremium/1000) * 12 * wageClass.proposedCostPerCoverageMonth
+  
+
+        
+        
+        
+        wageClass.currentInsuranceCost = wageClass.numberOfWorkers * (wageClass.avgInsurancePremium/1000) * 12 * wageClass.costPerCoverageMonth
+       
         
         
         
@@ -103,6 +190,18 @@ class WageClassesDetailViewController: UIViewController, UITextFieldDelegate {
             wageClassNameField.text = wageClass.wageClassName
             numberOfWorkersField.text = "\(wageClass.numberOfWorkers)"
             wagePerHourField.text = "\(wageClass.wagePerHour)"
+            avgInsurancePremiumLabel.text = "\(wageClass.avgInsurancePremium)"
+            costPerMonthLabel.text = "\(wageClass.costPerCoverageMonth)"
+            proposedInsurancePremField.text = "\(wageClass.proposedInsurancePremium)"
+            increasedCostPerMonthField.text = "\(wageClass.proposedCostPerCoverageMonth)"
+            monthlyCostMedInsurancePerMonthField.text = "\(wageClass.monthlyCostMedInsurancePerMonth)"
+            proposedMedMonthlyPerEmployeeField.text = "\(wageClass.proposedMedMonthlyPerEmployee)"
+            pensionMonthlyCostPerEmployeeField.text = "\(wageClass.pensionMonthlyCostPerEmployee)"
+            pensionProposedMonthlyCostPerEmployeeField.text = "\(wageClass.pensionProposedMonthlyCostPerEmployee)"
+            
+            
+            
+            
             
         }
         
@@ -113,6 +212,15 @@ class WageClassesDetailViewController: UIViewController, UITextFieldDelegate {
         self.wageClassNameField.resignFirstResponder()
         self.numberOfWorkersField.resignFirstResponder()
         self.wagePerHourField.resignFirstResponder()
+        self.avgInsurancePremiumLabel.resignFirstResponder()
+        self.costPerMonthLabel.resignFirstResponder()
+        self.proposedInsurancePremField.resignFirstResponder()
+        self.increasedCostPerMonthField.resignFirstResponder()
+        self.monthlyCostMedInsurancePerMonthField.resignFirstResponder()
+        self.proposedMedMonthlyPerEmployeeField.resignFirstResponder()
+        self.pensionMonthlyCostPerEmployeeField.resignFirstResponder()
+        self.pensionProposedMonthlyCostPerEmployeeField.resignFirstResponder()
+        
         
         
         return true

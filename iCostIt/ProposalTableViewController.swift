@@ -16,6 +16,9 @@ class ProposalTableViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    
+    
+    
     var controller: NSFetchedResultsController<Proposal>!
     
    

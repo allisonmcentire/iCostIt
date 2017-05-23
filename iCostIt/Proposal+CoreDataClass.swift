@@ -2,7 +2,7 @@
 //  Proposal+CoreDataClass.swift
 //  iCostIt
 //
-//  Created by Allison Mcentire on 2/26/17.
+//  Created by Allison Mcentire on 5/21/17.
 //  Copyright © 2017 com.millionacrenest. All rights reserved.
 //
 

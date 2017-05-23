@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB02B4F71E63A2800088C31B /* Proposal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB02B4F31E63A2800088C31B /* Proposal+CoreDataClass.swift */; };
-		CB02B4F81E63A2800088C31B /* Proposal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB02B4F41E63A2800088C31B /* Proposal+CoreDataProperties.swift */; };
-		CB02B4F91E63A2800088C31B /* WageClass+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB02B4F51E63A2800088C31B /* WageClass+CoreDataClass.swift */; };
-		CB02B4FA1E63A2800088C31B /* WageClass+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB02B4F61E63A2800088C31B /* WageClass+CoreDataProperties.swift */; };
+		CB1236A71ED38E8A00F279B4 /* WageClass+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1236A61ED38E8A00F279B4 /* WageClass+CoreDataProperties.swift */; };
 		CB2B84971DF6171400B1E435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2B84961DF6171400B1E435 /* AppDelegate.swift */; };
 		CB2B849C1DF6171400B1E435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2B849A1DF6171400B1E435 /* Main.storyboard */; };
 		CB2B849F1DF6171400B1E435 /* iCostIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB2B849D1DF6171400B1E435 /* iCostIt.xcdatamodeld */; };
@@ -21,11 +18,17 @@
 		CB38311B1DFA3B740087BD8A /* ProposalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38311A1DFA3B740087BD8A /* ProposalTableViewController.swift */; };
 		CB3831291DFB138E0087BD8A /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3831281DFB138E0087BD8A /* MaterialView.swift */; };
 		CB921F431DFB198600560ED5 /* ProposalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB921F421DFB198600560ED5 /* ProposalCell.swift */; };
+		CB92C4B71ED1C7CA006950CC /* RollUpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92C4B61ED1C7CA006950CC /* RollUpCollectionViewCell.swift */; };
 		CBA262A71DF63F5600083775 /* ProposalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA262A61DF63F5600083775 /* ProposalDetailViewController.swift */; };
 		CBA262AC1DF63FA100083775 /* WageClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA262AB1DF63FA100083775 /* WageClassesTableViewController.swift */; };
 		CBA262AE1DF63FB500083775 /* WageClassesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA262AD1DF63FB500083775 /* WageClassesDetailViewController.swift */; };
 		CBB2CDDF1DFDC63E00DB0D2D /* WageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB2CDDE1DFDC63E00DB0D2D /* WageCell.swift */; };
+		CBC67B531ECE64F700430DDD /* SelectWCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC67B521ECE64F700430DDD /* SelectWCViewController.swift */; };
+		CBC67B551ECE65B300430DDD /* RollUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC67B541ECE65B300430DDD /* RollUpViewController.swift */; };
 		CBC758221E4021020020C29C /* ExpandedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC758211E4021020020C29C /* ExpandedLabel.swift */; };
+		CBC810CA1ED24D38002FE4A3 /* Proposal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC810C61ED24D38002FE4A3 /* Proposal+CoreDataClass.swift */; };
+		CBC810CB1ED24D38002FE4A3 /* Proposal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC810C71ED24D38002FE4A3 /* Proposal+CoreDataProperties.swift */; };
+		CBC810CC1ED24D38002FE4A3 /* WageClass+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC810C81ED24D38002FE4A3 /* WageClass+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,10 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CB02B4F31E63A2800088C31B /* Proposal+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Proposal+CoreDataClass.swift"; path = "iCostIt/Proposal+CoreDataClass.swift"; sourceTree = "<group>"; };
-		CB02B4F41E63A2800088C31B /* Proposal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Proposal+CoreDataProperties.swift"; path = "iCostIt/Proposal+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		CB02B4F51E63A2800088C31B /* WageClass+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "WageClass+CoreDataClass.swift"; path = "iCostIt/WageClass+CoreDataClass.swift"; sourceTree = "<group>"; };
-		CB02B4F61E63A2800088C31B /* WageClass+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "WageClass+CoreDataProperties.swift"; path = "iCostIt/WageClass+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CB1236A61ED38E8A00F279B4 /* WageClass+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "WageClass+CoreDataProperties.swift"; path = "iCostIt/WageClass+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CB2B84931DF6171300B1E435 /* iCostIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCostIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2B84961DF6171400B1E435 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB2B849B1DF6171400B1E435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,11 +66,17 @@
 		CB38311A1DFA3B740087BD8A /* ProposalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposalTableViewController.swift; sourceTree = "<group>"; };
 		CB3831281DFB138E0087BD8A /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		CB921F421DFB198600560ED5 /* ProposalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposalCell.swift; sourceTree = "<group>"; };
+		CB92C4B61ED1C7CA006950CC /* RollUpCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollUpCollectionViewCell.swift; sourceTree = "<group>"; };
 		CBA262A61DF63F5600083775 /* ProposalDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposalDetailViewController.swift; sourceTree = "<group>"; };
 		CBA262AB1DF63FA100083775 /* WageClassesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WageClassesTableViewController.swift; sourceTree = "<group>"; };
 		CBA262AD1DF63FB500083775 /* WageClassesDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WageClassesDetailViewController.swift; sourceTree = "<group>"; };
 		CBB2CDDE1DFDC63E00DB0D2D /* WageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WageCell.swift; sourceTree = "<group>"; };
+		CBC67B521ECE64F700430DDD /* SelectWCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectWCViewController.swift; sourceTree = "<group>"; };
+		CBC67B541ECE65B300430DDD /* RollUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollUpViewController.swift; sourceTree = "<group>"; };
 		CBC758211E4021020020C29C /* ExpandedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedLabel.swift; sourceTree = "<group>"; };
+		CBC810C61ED24D38002FE4A3 /* Proposal+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Proposal+CoreDataClass.swift"; path = "iCostIt/Proposal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CBC810C71ED24D38002FE4A3 /* Proposal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Proposal+CoreDataProperties.swift"; path = "iCostIt/Proposal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CBC810C81ED24D38002FE4A3 /* WageClass+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "WageClass+CoreDataClass.swift"; path = "iCostIt/WageClass+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,18 +104,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CB02B4FB1E63A2850088C31B /* model */ = {
-			isa = PBXGroup;
-			children = (
-				CB02B4F31E63A2800088C31B /* Proposal+CoreDataClass.swift */,
-				CB02B4F41E63A2800088C31B /* Proposal+CoreDataProperties.swift */,
-				CB02B4F51E63A2800088C31B /* WageClass+CoreDataClass.swift */,
-				CB02B4F61E63A2800088C31B /* WageClass+CoreDataProperties.swift */,
-			);
-			name = model;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		CB2B848A1DF6171300B1E435 = {
 			isa = PBXGroup;
 			children = (
@@ -133,10 +127,11 @@
 		CB2B84951DF6171300B1E435 /* iCostIt */ = {
 			isa = PBXGroup;
 			children = (
-				CB02B4FB1E63A2850088C31B /* model */,
+				CBC67B511ECE550B00430DDD /* model */,
 				CB38312A1DFB13960087BD8A /* views */,
 				CB2B84961DF6171400B1E435 /* AppDelegate.swift */,
 				CB2B849A1DF6171400B1E435 /* Main.storyboard */,
+				CB92C4B61ED1C7CA006950CC /* RollUpCollectionViewCell.swift */,
 				CBC758211E4021020020C29C /* ExpandedLabel.swift */,
 				CBA262AF1DF63FCA00083775 /* wageClasses */,
 				CBA262AA1DF63F7F00083775 /* proposals */,
@@ -188,6 +183,8 @@
 				CB38311A1DFA3B740087BD8A /* ProposalTableViewController.swift */,
 				CB921F421DFB198600560ED5 /* ProposalCell.swift */,
 				CBA262A61DF63F5600083775 /* ProposalDetailViewController.swift */,
+				CBC67B521ECE64F700430DDD /* SelectWCViewController.swift */,
+				CBC67B541ECE65B300430DDD /* RollUpViewController.swift */,
 			);
 			name = proposals;
 			sourceTree = "<group>";
@@ -200,6 +197,18 @@
 				CBA262AD1DF63FB500083775 /* WageClassesDetailViewController.swift */,
 			);
 			name = wageClasses;
+			sourceTree = "<group>";
+		};
+		CBC67B511ECE550B00430DDD /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CBC810C61ED24D38002FE4A3 /* Proposal+CoreDataClass.swift */,
+				CBC810C71ED24D38002FE4A3 /* Proposal+CoreDataProperties.swift */,
+				CBC810C81ED24D38002FE4A3 /* WageClass+CoreDataClass.swift */,
+				CB1236A61ED38E8A00F279B4 /* WageClass+CoreDataProperties.swift */,
+			);
+			name = model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,18 +349,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB921F431DFB198600560ED5 /* ProposalCell.swift in Sources */,
-				CB02B4F81E63A2800088C31B /* Proposal+CoreDataProperties.swift in Sources */,
-				CB02B4F91E63A2800088C31B /* WageClass+CoreDataClass.swift in Sources */,
+				CBC67B551ECE65B300430DDD /* RollUpViewController.swift in Sources */,
 				CB38311B1DFA3B740087BD8A /* ProposalTableViewController.swift in Sources */,
-				CB02B4FA1E63A2800088C31B /* WageClass+CoreDataProperties.swift in Sources */,
+				CBC67B531ECE64F700430DDD /* SelectWCViewController.swift in Sources */,
 				CBA262A71DF63F5600083775 /* ProposalDetailViewController.swift in Sources */,
 				CB3831291DFB138E0087BD8A /* MaterialView.swift in Sources */,
-				CB02B4F71E63A2800088C31B /* Proposal+CoreDataClass.swift in Sources */,
+				CBC810CC1ED24D38002FE4A3 /* WageClass+CoreDataClass.swift in Sources */,
 				CB2B84971DF6171400B1E435 /* AppDelegate.swift in Sources */,
+				CBC810CA1ED24D38002FE4A3 /* Proposal+CoreDataClass.swift in Sources */,
 				CBA262AC1DF63FA100083775 /* WageClassesTableViewController.swift in Sources */,
 				CB2B849F1DF6171400B1E435 /* iCostIt.xcdatamodeld in Sources */,
+				CB1236A71ED38E8A00F279B4 /* WageClass+CoreDataProperties.swift in Sources */,
+				CBC810CB1ED24D38002FE4A3 /* Proposal+CoreDataProperties.swift in Sources */,
 				CBB2CDDF1DFDC63E00DB0D2D /* WageCell.swift in Sources */,
 				CBC758221E4021020020C29C /* ExpandedLabel.swift in Sources */,
+				CB92C4B71ED1C7CA006950CC /* RollUpCollectionViewCell.swift in Sources */,
 				CBA262AE1DF63FB500083775 /* WageClassesDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

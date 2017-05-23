@@ -26,7 +26,7 @@ class WageClassesTableViewController: UIViewController, UITableViewDelegate, UIT
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
-    //   generateTestData()
+     // generateTestData()
         attemptFetch()
         
     }
@@ -188,37 +188,37 @@ class WageClassesTableViewController: UIViewController, UITableViewDelegate, UIT
         wageClassA.wageClassName = "Sample WageClassA"
         wageClassA.numberOfWorkers = 55.00
         wageClassA.wagePerHour = 5.75
-       wageClassA.setValue(false,forKey:"checked")
+     
         
         let wageClassB = WageClass(context: context)
         wageClassB.wageClassName = "Sample WageClassB"
         wageClassB.numberOfWorkers = 80.00
         wageClassB.wagePerHour = 6.25
-       wageClassB.setValue(false,forKey:"checked")
+     
         
         let wageClassC = WageClass(context: context)
         wageClassC.wageClassName = "Sample WageClassC"
         wageClassC.numberOfWorkers = 25.00
         wageClassC.wagePerHour = 6.75
-        wageClassC.setValue(false,forKey:"checked")
+     
         
         let wageClassD = WageClass(context: context)
         wageClassD.wageClassName = "Sample WageClassD"
         wageClassD.numberOfWorkers = 40.00
         wageClassD.wagePerHour = 7.00
-        wageClassD.setValue(false,forKey:"checked")
+     
         
         let wageClassE = WageClass(context: context)
         wageClassE.wageClassName = "Sample WageClassE"
         wageClassE.numberOfWorkers = 60.00
         wageClassE.wagePerHour = 7.50
-        wageClassE.setValue(false,forKey:"checked")
+       
         
         let wageClassF = WageClass(context: context)
         wageClassF.wageClassName = "Sample WageClassF"
         wageClassF.numberOfWorkers = 40.00
         wageClassF.wagePerHour = 8.00
-        wageClassF.setValue(false,forKey:"checked")
+       
         
         
         

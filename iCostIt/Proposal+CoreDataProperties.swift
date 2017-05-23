@@ -2,7 +2,7 @@
 //  Proposal+CoreDataProperties.swift
 //  iCostIt
 //
-//  Created by Allison Mcentire on 2/26/17.
+//  Created by Allison Mcentire on 5/21/17.
 //  Copyright © 2017 com.millionacrenest. All rights reserved.
 //
 
@@ -17,9 +17,16 @@ extension Proposal {
     }
 
     @NSManaged public var dateCreated: NSDate?
+    @NSManaged public var daysOfSickLeave: Double
+    @NSManaged public var daysOfSickLeaveIncrease: Double
+    @NSManaged public var insurancePremiumIncrease: Double
     @NSManaged public var pensionContribution: Double
     @NSManaged public var percentIncrease: Double
     @NSManaged public var proposalName: String?
+    @NSManaged public var proposalNumHolidaysCurr: Double
+    @NSManaged public var proposalNumHolidaysProposed: Double
+    @NSManaged public var proposalVacaWeeks: Double
+    @NSManaged public var totalPaidHolidays: Double
     @NSManaged public var wageClasses: NSSet?
 
 }
