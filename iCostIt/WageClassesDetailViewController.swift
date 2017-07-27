@@ -39,6 +39,7 @@ class WageClassesDetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var pensionProposedMonthlyCostPerEmployeeField: UITextField!
     
+ 
     
     var wageClassToEdit: WageClass?
     
@@ -49,6 +50,8 @@ class WageClassesDetailViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+  
         
         wageClassNameField.delegate = self
         numberOfWorkersField.delegate = self
@@ -62,6 +65,7 @@ class WageClassesDetailViewController: UIViewController, UITextFieldDelegate {
         pensionMonthlyCostPerEmployeeField.delegate = self
         pensionProposedMonthlyCostPerEmployeeField.delegate = self
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "metal.jpg")!)
         
         if let topItem = self.navigationController?.navigationBar.topItem {
             
@@ -184,6 +188,10 @@ class WageClassesDetailViewController: UIViewController, UITextFieldDelegate {
         
         _ = navigationController?.popViewController(animated: true)
     }
+    
+   
+    
+
     
     func loadWageClassData() {
         if let wageClass = wageClassToEdit {

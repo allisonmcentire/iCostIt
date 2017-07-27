@@ -38,7 +38,7 @@ class SelectWCViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AddWageClassCell2", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AddWageClassCell", for: indexPath)
         
         let wageClass = wageClasses[indexPath.row]
         
@@ -59,23 +59,9 @@ class SelectWCViewController: UIViewController, UITableViewDelegate, UITableView
         
         proposalObject?.addToWageClasses(wageClassObject)
         
-        
-        
-        //        context.performAndWait({
-        //
-        //
-        //
-        //        do {
-        //            try
-        //
+      
         adD.saveContext()
-        //
-        //
-        //        } catch let error as NSError {
-        //            print("Cannot save object: \(error), \(error.localizedDescription)")
-        //        }
-        //              })
-        //
+      
         
     }
     func getWageClasses(){
@@ -90,6 +76,16 @@ class SelectWCViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     @IBAction func enterPressed(_ sender: UIButton) {
         
         
@@ -103,6 +99,15 @@ class SelectWCViewController: UIViewController, UITableViewDelegate, UITableView
         
         myResultsVC.proposalObject = proposalObject
         navigationController?.pushViewController(myResultsVC, animated: true)
+        
+        
+        
+        
+      
+        
+        
+        
+        
     }
     
 

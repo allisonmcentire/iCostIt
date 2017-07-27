@@ -37,8 +37,10 @@ class ProposalDetailViewController: UIViewController,  UITextFieldDelegate {
     
     
     
+    @IBOutlet weak var scrollView: UIScrollView!
     
     
+    @IBOutlet weak var wABRLabel: UILabel!
     
     
     
@@ -68,8 +70,12 @@ class ProposalDetailViewController: UIViewController,  UITextFieldDelegate {
         numVacationWeeksField.delegate = self
         totalPaidHolidaysField.delegate = self
         
+        if let wABR = proposalToEdit?.totalProposedCost ?? nil  {
         
- 
+        wABRLabel.text = "\(wABR)"
+        
+        }
+  
         if let topItem = self.navigationController?.navigationBar.topItem {
             
             topItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
@@ -78,7 +84,9 @@ class ProposalDetailViewController: UIViewController,  UITextFieldDelegate {
     
        // if proposalToEdit != nil {
             loadProposalData()
+      
        // }
+  
   
     }
    
@@ -99,6 +107,7 @@ class ProposalDetailViewController: UIViewController,  UITextFieldDelegate {
         return true
     }
     
+ 
     
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
         
@@ -155,7 +164,10 @@ class ProposalDetailViewController: UIViewController,  UITextFieldDelegate {
             proposal.daysOfSickLeaveIncrease = (sickDaysIncrease as NSString).doubleValue
         }
         
-       
+        
+        
+     
+        
         
      
       
@@ -176,6 +188,8 @@ class ProposalDetailViewController: UIViewController,  UITextFieldDelegate {
        // _ = navigationController?.popViewController(animated: true)
     }
     
+ 
+    
     func loadProposalData() {
         if let proposal = proposalToEdit {
             proposalNameField.text = proposal.proposalName
@@ -187,78 +201,17 @@ class ProposalDetailViewController: UIViewController,  UITextFieldDelegate {
             increasedNumHolidaysField.text = "\(proposal.proposalNumHolidaysProposed)"
             numVacationWeeksField.text = "\(proposal.proposalVacaWeeks)"
             totalPaidHolidaysField.text = "\(proposal.totalPaidHolidays)"
-            
-            
-            
-            
-//            let proposalNumberOfWorkers:Double = (proposal.value(forKeyPath: "wageClasses.@sum.numberOfWorkers") as! NSNumber).doubleValue
-//           
-//            
-//            let proposalWagesPaidPerHour:Double = (proposal.value(forKeyPath: "wageClasses.@sum.wagesPaidPerHour") as! NSNumber).doubleValue
-//           
-//            let wABR = proposalWagesPaidPerHour / proposalNumberOfWorkers
-//            
-//            let percentIncrease = proposal.percentIncrease
-//            
-//            let nWABR = wABR * percentIncrease
-//           
-//            //let nWABRInt64 = Int64(nWABR)
-//            
-//            let newWABR = wABR + nWABR
-//            
-//            
-//            let valuenWABR = nWABR
-//            let formattedValuenWABR = String(format: "%.2f", valuenWABR)
-//            
-//            let valuenewWABR = newWABR
-//            let formattedValuenewWABR = String(format: "%.2f", valuenewWABR)
-            
-//            
-//             newWeightedAverageYear1.text = "First Year % Increase: \(formattedValuenWABR)"
-//            
-//            
-//            realNewWeightedAverageYear1.text = "New Weighted Average, Year 1: \(formattedValuenewWABR)"
-//          
-//            let totalAnnualCost = proposalNumberOfWorkers * nWABR * 2080
-//            
-//            totalAnnualCostLabel.text = "Total Annual Cost: \(totalAnnualCost)"
-//            
-//            let year2 = newWABR * percentIncrease
-//             let formattedValueYear2 = String(format: "%.2f", year2)
-//            
-//           newWeightedAverageYear2Label.text = "Second Year % Increase: \(formattedValueYear2)"
-//            
-//            let combinedHourlyCost = nWABR + year2
-//            
-//            let newWeightedAverageYear2 = combinedHourlyCost + nWABR + newWABR
-//             let formattedValueWYear2 = String(format: "%.2f", newWeightedAverageYear2)
-//            
-//            newWeightedAverageYearTwoLabel.text = "New Weighted Average, Year 2: \(formattedValueWYear2)"
-//      
-//            let pension = proposal.pensionContribution
-//           
-//            
-//            let aacpe = pension / proposalNumberOfWorkers
-//            let formattedAacpe = String(format: "%.2f", aacpe)
-//            
-//            aacpeLabel.text = "AACPE: \(formattedAacpe)"
-//            
-//            
-//            let averageHourlyCost = aacpe / 2080
-//            let formattedValueWAHC = String(format: "%.2f", averageHourlyCost)
-//            averageHourlyCostLabel.text = "Average Hourly Cost: \(formattedValueWAHC)"
-            
-            
-            
-          
-            
-            
+         
             
         }
         
         
     }
     
+    
+    
+    
+
     
     @IBAction func deletePressed(_ sender: UIBarButtonItem) {
         

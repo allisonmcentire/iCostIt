@@ -29,7 +29,7 @@ class ProposalTableViewController: UIViewController, UITableViewDelegate, UITabl
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
-       // generateTestData()
+        generateTestData()
         attemptFetch()
        
     }
@@ -56,12 +56,16 @@ class ProposalTableViewController: UIViewController, UITableViewDelegate, UITabl
          return 0
     }
     
-   
+  
+    
+  
+    
     func configureCell(cell: ProposalCell, indexPath: NSIndexPath) {
         
         let proposal = controller.object(at: indexPath as IndexPath)
         cell.configureCell(proposal: proposal)
         
+   
         
     }
     
@@ -92,10 +96,10 @@ class ProposalTableViewController: UIViewController, UITableViewDelegate, UITabl
         return 0
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return 150
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        
+//        return
+//    }
    
     func attemptFetch() {
         

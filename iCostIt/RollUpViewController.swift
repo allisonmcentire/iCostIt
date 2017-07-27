@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class RollUpViewController: UIViewController {
+class RollUpViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var wagesDataLabel: UILabel!
     
@@ -31,9 +31,48 @@ class RollUpViewController: UIViewController {
     var proposalObject: Proposal?
     
     
+    @IBOutlet weak var textView: UITextView!
+    
+    
+    var types = ["Wages", "Vacations", "Holidays", "Sick Leave", "Medical Insurance", "Life Insurance", "Pension", "Total Package"]
+    
+
+    var results = [String]()
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        calculate()
+  
+
+      
+    }
+    
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return types.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as! RollUpTableViewCell
+        
+        cell.calcType.text = self.types[indexPath.row]
+        cell.calcResults.text = self.results[indexPath.row] as! String
+        
+        return cell
+    }
+    
+    
+    
+    
+    
+    
+    func calculate() {
         
         //calculate wages roll up
         
@@ -52,7 +91,7 @@ class RollUpViewController: UIViewController {
         let formattedNewCostAdd = String(format: "%.2f", newCostAdd)
         let percentIncreaseDisp = proposalObject!.percentIncrease * 100
         
-        wagesDataLabel.text = "CC: \(formattedValuenWABR) | NC: \(formattedNewCost) | A of I: \(formattedNewCostAdd) | PI: \(percentIncreaseDisp)"
+        var results1 = "Current cost: \(formattedValuenWABR) | New cost: \(formattedNewCost)\nIncrease: \(formattedNewCostAdd) | % Increase: \(percentIncreaseDisp)"
         
         //calculate vacations roll up
         
@@ -70,7 +109,7 @@ class RollUpViewController: UIViewController {
         let formattedVacaPercentIncrease = String(format: "%.2f", vacaPercentIncrease)
         
         
-        vacationsDataLabel.text = "CC: \(formattedVacaCost) | NC: \(formattednewVacaCostCents) | A of I: \( formattedVacaIncrease) | PI: \(formattedVacaPercentIncrease)"
+        var results2 = "Current cost: \(formattedVacaCost) | New cost: \(formattednewVacaCostCents) \nIncrease:\( formattedVacaIncrease) | % Increase: \(formattedVacaPercentIncrease)"
         
         
         
@@ -90,11 +129,12 @@ class RollUpViewController: UIViewController {
         let holidayIncreasePerHour = holidayPercentIncrease/2080
         let formattedIncreasePerHour = String(format: "%.2f", holidayIncreasePerHour)
         let holidayPercentIncreaseDiff = (holidayIncreasePerHour/curHolidayCostCents)*100
+        let formattedPercentIncreaseDiff = String(format: "%.2f", holidayPercentIncreaseDiff)
         
         
         
         
-        holidaysDataLabel.text = "CC: \(formattedCurHolidayCost) | NC: \(formattedNewHolidayCost) | A of I: \(formattedIncreasePerHour) | PI: \(holidayPercentIncreaseDiff)"
+        var results3 = "Current cost: \(formattedCurHolidayCost) | New cost: \(formattedNewHolidayCost) \nIncrease: \(formattedIncreasePerHour) | % Increase: \(formattedPercentIncreaseDiff)"
         
         // calculate sick leave roll up
         
@@ -109,13 +149,14 @@ class RollUpViewController: UIViewController {
         let sickLeaveIncreasePerHour = sickDaysNewCentsPerHourCost - sickDaysCentsPerHourCost
         let formattedSickLeaveIncreasePerHour = String(format: "%.2f", sickLeaveIncreasePerHour)
         let sickLeavePercIncreaseDiff = (sickLeaveIncreasePerHour/sickDaysCentsPerHourCost)*100
+        let formattedLeavePercIncreaseDiff = String(format: "%.2f", sickLeavePercIncreaseDiff)
         
         
-        sickLeaveDataLabel.text = "CC: \(formattedSickDaysPerHourCost) | NC: \(formattedSickDaysNewCentsPerHourCost) | A of I: \(formattedSickLeaveIncreasePerHour) | PI: \(sickLeavePercIncreaseDiff)"
+        var results4 = "Current cost: \(formattedSickDaysPerHourCost) | New cost: \(formattedSickDaysNewCentsPerHourCost) \nIncrease: \(formattedSickLeaveIncreasePerHour) | % Increase: \(formattedLeavePercIncreaseDiff)"
         
         // calculate medical insurance roll up
         
-         //cc
+        //cc
         let medicalMonthlyTotal:Double = (proposalObject!.value(forKeyPath: "wageClasses.@sum.montlyClassCostMedInsurance") as! NSNumber).doubleValue
         debugPrint("\(medicalMonthlyTotal)")
         
@@ -144,14 +185,14 @@ class RollUpViewController: UIViewController {
         
         let medPercentDiff = (medAofI/montlyMedInsuranceCentsPerHour)*100
         
-        medicalDataLabel.text = "CC: \(formattedmontlyMedInsuranceCentsPerHour) | NC: \(formattedproposedMontlyMedInsuranceCentsPerHour) | A of I: \(formattedMedAofI) | PI: \(medPercentDiff)"
- 
+        var results5 = "Current cost: \(formattedmontlyMedInsuranceCentsPerHour) | New cost: \(formattedproposedMontlyMedInsuranceCentsPerHour) \nIncrease: \(formattedMedAofI)  | % Increase: \(medPercentDiff)"
+        
         // calculate life insurance roll up
-
-         let insuranceMonthlyTotal:Double = (proposalObject!.value(forKeyPath: "wageClasses.@sum.wageClassCurrMedCost") as! NSNumber).doubleValue
+        
+        let insuranceMonthlyTotal:Double = (proposalObject!.value(forKeyPath: "wageClasses.@sum.wageClassCurrMedCost") as! NSNumber).doubleValue
         let insuranceAnnualCostPerEmployee = insuranceMonthlyTotal/proposalNumberOfWorkers
         let insuranceAnnualCostPerEmployeeCents = insuranceAnnualCostPerEmployee/2080
-         let formattedInsuranceAnnualCostPerEmployeeCents = String(format: "%.2f", insuranceAnnualCostPerEmployeeCents)
+        let formattedInsuranceAnnualCostPerEmployeeCents = String(format: "%.2f", insuranceAnnualCostPerEmployeeCents)
         
         let insuranceProposedMonthlyTotal:Double = (proposalObject!.value(forKeyPath: "wageClasses.@sum.wageClassProMedCost") as! NSNumber).doubleValue
         let insuranceProposedCostPerEmployee = insuranceProposedMonthlyTotal/proposalNumberOfWorkers
@@ -162,14 +203,14 @@ class RollUpViewController: UIViewController {
         
         let formattedInsuranceAofI = String(format: "%.2f", insuranceAofI)
         
-         let insurancePercentDiff = (insuranceAofI/insuranceAnnualCostPerEmployeeCents)*100
+        let insurancePercentDiff = (insuranceAofI/insuranceAnnualCostPerEmployeeCents)*100
         
         
-        lifeInsuranceDataLabel.text = "CC: \(formattedInsuranceAnnualCostPerEmployeeCents) | NC: \(formattedInsuranceProposedCostPerEmployeeCents) | A of I: \(formattedInsuranceAofI) | PI: \(insurancePercentDiff)"
+        var results6 = "Current cost: \(formattedInsuranceAnnualCostPerEmployeeCents) | New cost: \(formattedInsuranceProposedCostPerEmployeeCents) \nIncrease: \(formattedInsuranceAofI) | % Increase: \(insurancePercentDiff)"
         
         // calculate pension roll up
         
-           let pensionMonthlyTotal:Double = (proposalObject!.value(forKeyPath: "wageClasses.@sum.pensionMonthlyCostPerEmployee") as! NSNumber).doubleValue
+        let pensionMonthlyTotal:Double = (proposalObject!.value(forKeyPath: "wageClasses.@sum.pensionMonthlyCostPerEmployee") as! NSNumber).doubleValue
         let pensionMonthlyAvg = pensionMonthlyTotal/12
         let currentPensionCost = pensionMonthlyAvg/173.3
         let formattedCurrentPensionCost = String(format: "%.2f", currentPensionCost)
@@ -180,10 +221,10 @@ class RollUpViewController: UIViewController {
         let formattedProposedPensionCost = String(format: "%.2f", proposedPensionCost)
         
         let pensionAofI = proposedPensionCost - currentPensionCost
-         let formattedPensionAofI = String(format: "%.2f", pensionAofI)
+        let formattedPensionAofI = String(format: "%.2f", pensionAofI)
         let pensionPercentDiff = (pensionAofI/currentPensionCost)*100
-       
-        pensionDataLabel.text = "CC: \(formattedCurrentPensionCost) | NC: \(formattedProposedPensionCost) | A of I: \(formattedPensionAofI) | PI: \(pensionPercentDiff)"
+        
+        var results7 = "Current cost: \(formattedCurrentPensionCost) | New cost: \(formattedProposedPensionCost) \nIncrease: \(formattedPensionAofI) | % Increase: \(pensionPercentDiff)"
         
         // calculate total package roll up
         
@@ -191,7 +232,7 @@ class RollUpViewController: UIViewController {
         let formattedTotalCurrentCost = String(format: "%.2f", totalCurrentCost)
         
         let totalProposedCost = newCost + newVacaCostCents + newHolidayCostCents + sickDaysNewCentsPerHourCost + proposedMontlyMedInsuranceCentsPerHour + insuranceProposedCostPerEmployeeCents + proposedPensionCost
-           let formattedTotalProposedCost  = String(format: "%.2f", totalProposedCost)
+        let formattedTotalProposedCost  = String(format: "%.2f", totalProposedCost)
         
         let totalAofI = newCostAdd + increasePerHourVaca + holidayIncreasePerHour + sickLeaveIncreasePerHour + medAofI + insuranceAofI + pensionAofI
         let formattedTotalAofI  = String(format: "%.2f", totalAofI)
@@ -202,19 +243,16 @@ class RollUpViewController: UIViewController {
         
         
         
-        totalPackDataLabel.text = "CC: \(formattedTotalCurrentCost) | NC: \(formattedTotalProposedCost) | AofI:\(formattedTotalAofI) | PI: \(formattedTotalPercentDiff)"
+        var results8 = "Current cost: \(formattedTotalCurrentCost) | New cost: \(formattedTotalProposedCost) \nIncrease:\(formattedTotalAofI) | % Increase: \(formattedTotalPercentDiff)"
         
-        
-        
-        
-        
-        
+
+        results = ["\(results1)", "\(results2)", "\(results3)", "\(results4)", "\(results5)", "\(results6)", "\(results7)", "\(results8)"]
+
+    
         
     }
     
-    
-    
-    
+   
     
     
     /*
@@ -226,5 +264,6 @@ class RollUpViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+
     
 }

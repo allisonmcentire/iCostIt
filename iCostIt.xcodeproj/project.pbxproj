@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CB01C0801ED4A953006F631C /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01C07F1ED4A953006F631C /* TutorialPageViewController.swift */; };
 		CB1236A71ED38E8A00F279B4 /* WageClass+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1236A61ED38E8A00F279B4 /* WageClass+CoreDataProperties.swift */; };
+		CB132CCD1F294BE70037C935 /* Proposal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB132CCC1F294BE70037C935 /* Proposal+CoreDataProperties.swift */; };
+		CB132CCF1F29547F0037C935 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB132CCE1F29547F0037C935 /* TabBarViewController.swift */; };
 		CB2B84971DF6171400B1E435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2B84961DF6171400B1E435 /* AppDelegate.swift */; };
 		CB2B849C1DF6171400B1E435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2B849A1DF6171400B1E435 /* Main.storyboard */; };
 		CB2B849F1DF6171400B1E435 /* iCostIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB2B849D1DF6171400B1E435 /* iCostIt.xcdatamodeld */; };
@@ -28,8 +30,9 @@
 		CBC67B551ECE65B300430DDD /* RollUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC67B541ECE65B300430DDD /* RollUpViewController.swift */; };
 		CBC758221E4021020020C29C /* ExpandedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC758211E4021020020C29C /* ExpandedLabel.swift */; };
 		CBC810CA1ED24D38002FE4A3 /* Proposal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC810C61ED24D38002FE4A3 /* Proposal+CoreDataClass.swift */; };
-		CBC810CB1ED24D38002FE4A3 /* Proposal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC810C71ED24D38002FE4A3 /* Proposal+CoreDataProperties.swift */; };
 		CBC810CC1ED24D38002FE4A3 /* WageClass+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC810C81ED24D38002FE4A3 /* WageClass+CoreDataClass.swift */; };
+		CBD43E991F27976C00A1A3F8 /* RollUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD43E981F27976C00A1A3F8 /* RollUpTableViewCell.swift */; };
+		CBDF6E691F2A750F001FD9AA /* AddWageClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDF6E681F2A750F001FD9AA /* AddWageClassCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,8 @@
 /* Begin PBXFileReference section */
 		CB01C07F1ED4A953006F631C /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
 		CB1236A61ED38E8A00F279B4 /* WageClass+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "WageClass+CoreDataProperties.swift"; path = "iCostIt/WageClass+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CB132CCC1F294BE70037C935 /* Proposal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Proposal+CoreDataProperties.swift"; path = "iCostIt/Proposal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CB132CCE1F29547F0037C935 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		CB2B84931DF6171300B1E435 /* iCostIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCostIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2B84961DF6171400B1E435 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB2B849B1DF6171400B1E435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,8 +82,10 @@
 		CBC67B541ECE65B300430DDD /* RollUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollUpViewController.swift; sourceTree = "<group>"; };
 		CBC758211E4021020020C29C /* ExpandedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedLabel.swift; sourceTree = "<group>"; };
 		CBC810C61ED24D38002FE4A3 /* Proposal+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Proposal+CoreDataClass.swift"; path = "iCostIt/Proposal+CoreDataClass.swift"; sourceTree = "<group>"; };
-		CBC810C71ED24D38002FE4A3 /* Proposal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Proposal+CoreDataProperties.swift"; path = "iCostIt/Proposal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CBC810C81ED24D38002FE4A3 /* WageClass+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "WageClass+CoreDataClass.swift"; path = "iCostIt/WageClass+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CBD43E981F27976C00A1A3F8 /* RollUpTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollUpTableViewCell.swift; sourceTree = "<group>"; };
+		CBDF6E681F2A750F001FD9AA /* AddWageClassCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWageClassCell.swift; sourceTree = "<group>"; };
+		CBF0E9991F2A8AB100FFC8D7 /* IQKeyboardManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManager.framework; path = "../../Library/Developer/Xcode/DerivedData/iCostIt-crqfabihblztmvfrkllzukugulgn/Build/Products/Debug-iphoneos/IQKeyboardManager/IQKeyboardManager.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +113,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C8CF4C5E41E31DDAAAC494AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBF0E9991F2A8AB100FFC8D7 /* IQKeyboardManager.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CB2B848A1DF6171300B1E435 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +128,7 @@
 				CB2B84AD1DF6171400B1E435 /* iCostItTests */,
 				CB2B84B81DF6171400B1E435 /* iCostItUITests */,
 				CB2B84941DF6171300B1E435 /* Products */,
+				C8CF4C5E41E31DDAAAC494AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,7 +150,6 @@
 				CB2B84961DF6171400B1E435 /* AppDelegate.swift */,
 				CB2B849A1DF6171400B1E435 /* Main.storyboard */,
 				CB01C07F1ED4A953006F631C /* TutorialPageViewController.swift */,
-				CB92C4B61ED1C7CA006950CC /* RollUpCollectionViewCell.swift */,
 				CBC758211E4021020020C29C /* ExpandedLabel.swift */,
 				CBA262AF1DF63FCA00083775 /* wageClasses */,
 				CBA262AA1DF63F7F00083775 /* proposals */,
@@ -175,6 +190,7 @@
 		CB38312A1DFB13960087BD8A /* views */ = {
 			isa = PBXGroup;
 			children = (
+				CB132CCE1F29547F0037C935 /* TabBarViewController.swift */,
 				CB3831281DFB138E0087BD8A /* MaterialView.swift */,
 			);
 			name = views;
@@ -183,10 +199,13 @@
 		CBA262AA1DF63F7F00083775 /* proposals */ = {
 			isa = PBXGroup;
 			children = (
+				CBD43E981F27976C00A1A3F8 /* RollUpTableViewCell.swift */,
 				CB38311A1DFA3B740087BD8A /* ProposalTableViewController.swift */,
+				CB92C4B61ED1C7CA006950CC /* RollUpCollectionViewCell.swift */,
 				CB921F421DFB198600560ED5 /* ProposalCell.swift */,
 				CBA262A61DF63F5600083775 /* ProposalDetailViewController.swift */,
 				CBC67B521ECE64F700430DDD /* SelectWCViewController.swift */,
+				CBDF6E681F2A750F001FD9AA /* AddWageClassCell.swift */,
 				CBC67B541ECE65B300430DDD /* RollUpViewController.swift */,
 			);
 			name = proposals;
@@ -205,8 +224,8 @@
 		CBC67B511ECE550B00430DDD /* model */ = {
 			isa = PBXGroup;
 			children = (
+				CB132CCC1F294BE70037C935 /* Proposal+CoreDataProperties.swift */,
 				CBC810C61ED24D38002FE4A3 /* Proposal+CoreDataClass.swift */,
-				CBC810C71ED24D38002FE4A3 /* Proposal+CoreDataProperties.swift */,
 				CBC810C81ED24D38002FE4A3 /* WageClass+CoreDataClass.swift */,
 				CB1236A61ED38E8A00F279B4 /* WageClass+CoreDataProperties.swift */,
 			);
@@ -354,18 +373,21 @@
 				CB921F431DFB198600560ED5 /* ProposalCell.swift in Sources */,
 				CBC67B551ECE65B300430DDD /* RollUpViewController.swift in Sources */,
 				CB38311B1DFA3B740087BD8A /* ProposalTableViewController.swift in Sources */,
+				CBDF6E691F2A750F001FD9AA /* AddWageClassCell.swift in Sources */,
 				CBC67B531ECE64F700430DDD /* SelectWCViewController.swift in Sources */,
 				CBA262A71DF63F5600083775 /* ProposalDetailViewController.swift in Sources */,
+				CB132CCD1F294BE70037C935 /* Proposal+CoreDataProperties.swift in Sources */,
 				CB3831291DFB138E0087BD8A /* MaterialView.swift in Sources */,
 				CBC810CC1ED24D38002FE4A3 /* WageClass+CoreDataClass.swift in Sources */,
+				CB132CCF1F29547F0037C935 /* TabBarViewController.swift in Sources */,
 				CB2B84971DF6171400B1E435 /* AppDelegate.swift in Sources */,
 				CBC810CA1ED24D38002FE4A3 /* Proposal+CoreDataClass.swift in Sources */,
 				CBA262AC1DF63FA100083775 /* WageClassesTableViewController.swift in Sources */,
 				CB2B849F1DF6171400B1E435 /* iCostIt.xcdatamodeld in Sources */,
 				CB1236A71ED38E8A00F279B4 /* WageClass+CoreDataProperties.swift in Sources */,
-				CBC810CB1ED24D38002FE4A3 /* Proposal+CoreDataProperties.swift in Sources */,
 				CBB2CDDF1DFDC63E00DB0D2D /* WageCell.swift in Sources */,
 				CB01C0801ED4A953006F631C /* TutorialPageViewController.swift in Sources */,
+				CBD43E991F27976C00A1A3F8 /* RollUpTableViewCell.swift in Sources */,
 				CBC758221E4021020020C29C /* ExpandedLabel.swift in Sources */,
 				CB92C4B71ED1C7CA006950CC /* RollUpCollectionViewCell.swift in Sources */,
 				CBA262AE1DF63FB500083775 /* WageClassesDetailViewController.swift in Sources */,
@@ -511,6 +533,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -523,6 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V243T33UAS;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = iCostIt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -537,6 +561,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V243T33UAS;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = iCostIt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

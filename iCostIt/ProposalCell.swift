@@ -19,13 +19,16 @@ class ProposalCell: UITableViewCell {
     
     @IBOutlet weak var dateCreatedLabel: UILabel!
     
-    @IBOutlet weak var weightedAverageBaseRateLabel: UILabel!
     
+
   
    
     
     
     func configureCell(proposal: Proposal) {
+        
+        
+        
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM dd yyyy"
@@ -36,10 +39,10 @@ class ProposalCell: UITableViewCell {
    
        
         
-        var proposalNumberOfWorkers:Double = (proposal.value(forKeyPath: "wageClasses.@sum.numberOfWorkers") as! NSNumber).doubleValue
+        var proposalNumberOfWorkers = proposal.value(forKeyPath: "wageClasses.@sum.numberOfWorkers") as! NSNumber
 
         
- 
+      
     
         
        
@@ -49,12 +52,14 @@ class ProposalCell: UITableViewCell {
         
        
         
-        let wABR = proposalWagesPaidPerHour / proposalNumberOfWorkers
+        let wABR = proposalWagesPaidPerHour / proposalNumberOfWorkers.doubleValue
         //let wABRFloat = Float(wABR)
       //  let workers = Int(arraySum)
         
         
-     
+        let formatter = NumberFormatter()
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 1
        
         
         
@@ -65,7 +70,7 @@ class ProposalCell: UITableViewCell {
         
         contractNameLabel.text = proposal.proposalName
         currentCostLabel.text = "Total Wages Paid/Hour: \(proposalWagesPaidPerHour)"
-        totalWorkersLabel.text = "Total Workers: \(proposalNumberOfWorkers)"
+        
         dateCreatedLabel.text = "\(convertedDateString)"
         
         
@@ -73,9 +78,11 @@ class ProposalCell: UITableViewCell {
      let value = wABR
         let formattedValue = String(format: "%.2f", value)
         
-       
+       let formattedWorkers = (formatter.string(from: proposalNumberOfWorkers) ?? "n/a")
+        
+       totalWorkersLabel.text = "Total Workers: \(formattedWorkers)"
     
-        weightedAverageBaseRateLabel.text = "Weighted Average Base Rate: \(formattedValue)"
+        currentCostLabel.text = "$\(formattedValue)"
     
     
     

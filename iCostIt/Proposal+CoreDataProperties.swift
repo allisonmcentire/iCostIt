@@ -2,7 +2,7 @@
 //  Proposal+CoreDataProperties.swift
 //  iCostIt
 //
-//  Created by Allison Mcentire on 5/21/17.
+//  Created by Allison Mcentire on 7/26/17.
 //  Copyright © 2017 com.millionacrenest. All rights reserved.
 //
 
@@ -13,7 +13,7 @@ import CoreData
 extension Proposal {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Proposal> {
-        return NSFetchRequest<Proposal>(entityName: "Proposal");
+        return NSFetchRequest<Proposal>(entityName: "Proposal")
     }
 
     @NSManaged public var dateCreated: NSDate?
@@ -27,6 +27,7 @@ extension Proposal {
     @NSManaged public var proposalNumHolidaysProposed: Double
     @NSManaged public var proposalVacaWeeks: Double
     @NSManaged public var totalPaidHolidays: Double
+    @NSManaged public var totalProposedCost: Double
     @NSManaged public var wageClasses: NSSet?
 
 }
